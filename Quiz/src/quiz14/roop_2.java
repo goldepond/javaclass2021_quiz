@@ -10,32 +10,47 @@ public static void main(String[] args) {
 	
 	while(true)
 	{
-		try {
-			index ++;
-			int a = Integer.parseInt(sc.nextLine());
+		int a = Integer.parseInt(sc.nextLine());
+		try 
+		{
+			index ++;	
+			if(1<a && a<100)
+			{
+				if(a == random)
+				{
+					System.out.println("ì •ë‹µì„ë„¤ë‹¤ :" + index);				break;
+				}
+				else if (a<random)
+				{
+					System.out.println("ë”í¼");
+				}				
+				else if (a>random)
+				{
+					System.out.println("ë”ì‘ìŒ.");
+				}				
+				else
+				{
+					System.out.println("ì¥ë‚œ ã„´ã„´.");
+				}
 			
-			if(a == random)
-			{
-				System.out.println("Á¤´ä ! ½ÃµµÈ½¼ö :" + index);
-				break;
-			}
-			else if (a<random)
-			{
-				System.out.println("zÅ­");
-			}
-			else if (a>random)
-			{
-				System.out.println("ÀÛÀ½.");
 			}
 			else
 			{
-				System.out.println("Àß¸ø ÀÔ·ÂµÈ °ªÀÔ´Ï´Ù.");
+				throw new Exception("ìš°ë¦°ëë‚¬ì–´ã…“ã…“");
 			}
 			
 		}
 		catch(Exception e)
 		{
-			System.out.println("Àß¸ø ÀÔ·ÂµÈ °ªÀÔ´Ï´Ù.");
+			if(1>a || a>100)
+			{
+				System.out.println("ìˆ«ìë§Œ ì…ë ¥");
+				index ++;
+			}
+			else
+			{
+				System.out.println("ë¬¸ë”” ì •ìˆ˜ë§Œì…ë ¥");
+			}
 		}
 	}
 
